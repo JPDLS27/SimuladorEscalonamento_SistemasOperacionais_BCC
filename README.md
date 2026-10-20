@@ -1,0 +1,1 @@
+# SimuladorEscalonamento_SistemasOperacionais_BCC
