@@ -196,7 +196,7 @@ public class TelaPrincipal extends JFrame {
         spAging.addChangeListener(e -> reiniciar());
         ckPreemptivo.addActionListener(e -> reiniciar());
         slVelocidade.addChangeListener(e -> timer.setDelay(velocidadeMs()));
-        modeloProcessos.addTableModelListener(e -> { if (sim != null && sim.getTempo() > 0) reiniciar(); });
+        modeloProcessos.addTableModelListener(e -> reiniciar());
     }
 
     // ------------------------------------------------------------ lógica

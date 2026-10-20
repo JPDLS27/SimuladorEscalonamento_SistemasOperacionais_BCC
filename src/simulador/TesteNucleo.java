@@ -48,6 +48,7 @@ public class TesteNucleo {
         List<Processo> ex5 = List.of(new Processo(1,0,0,3,4,2), new Processo(2,0,0,5));
         Simulador s5 = roda(new FCFS(), ex5);
         System.out.println("\nFCFS com E/S: " + gantt(s5));
+        confere("FCFS com E/S: fim de P2", s5.getProcessos().get(1).getFim(), 8);
         confere("FCFS com E/S: fim de P1", s5.getProcessos().get(0).getFim(), 10);
         System.out.println("Log:"); s5.getLog().forEach(l -> System.out.println("  " + l));
 

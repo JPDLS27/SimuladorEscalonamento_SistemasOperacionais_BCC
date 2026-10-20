@@ -26,6 +26,8 @@ public class Processo {
     public Processo(int pid, int chegada, int prioridade, int... rajadas) {
         if (rajadas.length == 0 || rajadas.length % 2 == 0)
             throw new IllegalArgumentException("rajadas devem começar e terminar com CPU (tamanho ímpar)");
+        if (chegada < 0)
+            throw new IllegalArgumentException("a chegada não pode ser negativa");
         this.pid = pid;
         this.chegada = chegada;
         this.prioridade = prioridade;
